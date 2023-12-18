@@ -17,7 +17,9 @@
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "analyze": "size-limit --why"
+    "analyze": "size-limit --why",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -33,29 +35,42 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "@chai-latte/ui",
-  "author": "thelunaticlad",
-  "module": "dist/chai-latte.esm.js",
+  "name": "tailwind-typescript-components",
+  "author": "codeflowjs",
+  "module": "dist/tailwind-typescript-components.esm.js",
   "size-limit": [
     {
-      "path": "dist/chai-latte.cjs.production.min.js",
+      "path": "dist/tailwind-typescript-components.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/chai-latte.esm.js",
+      "path": "dist/tailwind-typescript-components.esm.js",
       "limit": "10 KB"
     }
   ],
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^11.0.1",
-    "@types/react": "^18.2.45",
-    "@types/react-dom": "^18.2.17",
+    "@babel/core": "^7.21.3",
+    "@size-limit/preset-small-lib": "^8.2.4",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-info": "^5.3.21",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/addons": "^6.5.16",
+    "@storybook/react": "^6.5.16",
+    "@types/react": "^18.0.31",
+    "@types/react-dom": "^18.0.11",
+    "autoprefixer": "^10.4.14",
+    "babel-loader": "^9.1.2",
     "husky": "^8.0.3",
+    "postcss": "^8.4.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "size-limit": "^11.0.1",
+    "react-is": "^18.2.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "size-limit": "^8.2.4",
+    "tailwindcss": "^3.3.0",
     "tsdx": "^0.14.1",
-    "tslib": "^2.6.2",
-    "typescript": "^5.3.3"
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
   }
 }
